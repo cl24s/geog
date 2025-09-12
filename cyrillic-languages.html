@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirill nyelvek - Geo Guesser Segítő</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇷🇺 Cirill nyelvek</h1>
+            <p>Cirill betűs nyelvek felismerése GeoGuesser játékhoz</p>
+        </header>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="asian-languages.html">Nyelvek</a></li>
+                <li><a href="flags.html">Zászlók</a></li>
+                <li><a href="countries-list.html">Összes országok</a></li>
+            </ul>
+        </nav>
+        
+        <div class="sub-nav">
+            <ul>
+                <li><a href="asian-languages.html">Ázsiai nyelvek</a></li>
+                <li><a href="cyrillic-languages.html" class="active">Cirill nyelvek</a></li>
+                <li><a href="arabic-languages.html">Arab nyelvek</a></li>
+                <li><a href="spanish-portuguese.html">Spanyol vs Portugál</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <div class="grid">
+                <div class="script-card">
+                    <div class="country">
+                        <img src="flags/ru.png" alt="Orosz zászló" class="small-flag"> Orosz
+                    </div>
+                    <div class="sample-text">Русский язык</div>
+                    <div class="features">
+                        <h4>Jellemzők:</h4>
+                        • 33 betű<br>
+                        • Jellemző betűk: Я, Ж, Ц, Щ, Ъ, Ы, Ь, Э, Ю<br>
+                        • Kemény és lágy jelek (Ъ, Ь)
+                    </div>
+                    <div class="tip">
+                        <strong>Tipp:</strong> Ы betű = biztosan orosz
+                    </div>
+                </div>
+
+                <div class="script-card">
+                    <div class="country">
+                        <img src="flags/ua.png" alt="Ukrán zászló" class="small-flag"> Ukrán
+                    </div>
+                    <div class="sample-text">Українська мова</div>
+                    <div class="features">
+                        <h4>Jellemzők:</h4>
+                        • Jellemző betűk: Є, І, Ї, Ґ<br>
+                        • Nincs Ъ, Ы, Э<br>
+                        • І betű az orosz И helyett
+                    </div>
+                    <div class="tip">
+                        <strong>Tipp:</strong> Є, Ї betűk = ukrán
+                    </div>
+                </div>
+
+                <div class="script-card">
+                    <div class="country">
+                        <img src="flags/bg.png" alt="Bolgár zászló" class="small-flag"> Bolgár
+                    </div>
+                    <div class="sample-text">Български език</div>
+                    <div class="features">
+                        <h4>Jellemzők:</h4>
+                        • Jellemző betűk: Ъ (schwa hang)<br>
+                        • Nincs Ы<br>
+                        • Ъ-t magánhangzóként használják
+                    </div>
+                    <div class="tip">
+                        <strong>Tipp:</strong> Ъ magánhangzóként = bolgár
+                    </div>
+                </div>
+
+                <div class="script-card">
+                    <div class="country">
+                        <img src="flags/rs.png" alt="Szerb zászló" class="small-flag"> Szerb
+                    </div>
+                    <div class="sample-text">Српски језик</div>
+                    <div class="features">
+                        <h4>Jellemzők:</h4>
+                        • Jellemző betűk: Ј, Љ, Њ, Ћ, Ђ, Џ<br>
+                        • Љ, Њ = összetett mássalhangzók<br>
+                        • Ћ, Ђ = lágy mássalhangzók
+                    </div>
+                    <div class="tip">
+                        <strong>Tipp:</strong> Љ, Њ, Ћ, Ђ betűk = szerb
+                    </div>
+                </div>
+
+                <div class="script-card">
+                    <div class="country">
+                        <img src="flags/mk.png" alt="Macedón zászló" class="small-flag"> Macedón
+                    </div>
+                    <div class="sample-text">Македонски јазик</div>
+                    <div class="features">
+                        <h4>Jellemzők:</h4>
+                        • Jellemző betűk: Ѓ, Ќ, Љ, Њ, Џ, Ѕ<br>
+                        • Ѓ, Ќ = macedón specifikus<br>
+                        • Ѕ = DZ hang
+                    </div>
+                    <div class="tip">
+                        <strong>Tipp:</strong> Ѓ, Ќ betűk = macedón
+                    </div>
+                </div>
+
+                <div class="script-card">
+                    <div class="country">
+                        <img src="flags/by.png" alt="Belarusz zászló" class="small-flag"> Belarusz
+                    </div>
+                    <div class="sample-text">Беларуская мова</div>
+                    <div class="features">
+                        <h4>Jellemzők:</h4>
+                        • Jellemző betűk: Ў, І<br>
+                        • Nincs Ъ, Ы, Э<br>
+                        • Ў = rövid U hang
+                    </div>
+                    <div class="tip">
+                        <strong>Tipp:</strong> Ў betű = belarusz
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Összes országok - Geo Guesser Segítő</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Összes országok</h1>
+            <p>Országok listája kis zászlóval és domain végződéssel</p>
+        </header>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="asian-languages.html">Nyelvek</a></li>
+                <li><a href="flags.html">Zászlók</a></li>
+                <li><a href="countries-list.html" class="active">Összes országok</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            <div class="search-container">
+                <input type="text" id="country-search" placeholder="Keresés országnév vagy domain alapján..." onkeyup="filterCountryList()">
+            </div>
+            
+            <div class="country-list">
+                <h3>🇪🇺 Európa (44 ország)</h3>
+                <div class="list-item">
+                    <img src="flags/ad.png" alt="Andorra" class="list-flag">
+                    <span class="list-country-name">Andorra</span>
+                    <span class="list-domain">.ad</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/al.png" alt="Albánia" class="list-flag">
+                    <span class="list-country-name">Albánia</span>
+                    <span class="list-domain">.al</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/at.png" alt="Ausztria" class="list-flag">
+                    <span class="list-country-name">Ausztria</span>
+                    <span class="list-domain">.at</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/be.png" alt="Belgium" class="list-flag">
+                    <span class="list-country-name">Belgium</span>
+                    <span class="list-domain">.be</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/by.png" alt="Fehéroroszország" class="list-flag">
+                    <span class="list-country-name">Fehéroroszország</span>
+                    <span class="list-domain">.by</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ba.png" alt="Bosznia-Hercegovina" class="list-flag">
+                    <span class="list-country-name">Bosznia-Hercegovina</span>
+                    <span class="list-domain">.ba</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bg.png" alt="Bulgária" class="list-flag">
+                    <span class="list-country-name">Bulgária</span>
+                    <span class="list-domain">.bg</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/hr.png" alt="Horvátország" class="list-flag">
+                    <span class="list-country-name">Horvátország</span>
+                    <span class="list-domain">.hr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cy.png" alt="Ciprus" class="list-flag">
+                    <span class="list-country-name">Ciprus</span>
+                    <span class="list-domain">.cy</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cz.png" alt="Csehország" class="list-flag">
+                    <span class="list-country-name">Csehország</span>
+                    <span class="list-domain">.cz</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/dk.png" alt="Dánia" class="list-flag">
+                    <span class="list-country-name">Dánia</span>
+                    <span class="list-domain">.dk</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ee.png" alt="Észtország" class="list-flag">
+                    <span class="list-country-name">Észtország</span>
+                    <span class="list-domain">.ee</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/fi.png" alt="Finnország" class="list-flag">
+                    <span class="list-country-name">Finnország</span>
+                    <span class="list-domain">.fi</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/fr.png" alt="Franciaország" class="list-flag">
+                    <span class="list-country-name">Franciaország</span>
+                    <span class="list-domain">.fr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ge.png" alt="Grúzia" class="list-flag">
+                    <span class="list-country-name">Grúzia</span>
+                    <span class="list-domain">.ge</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/de.png" alt="Németország" class="list-flag">
+                    <span class="list-country-name">Németország</span>
+                    <span class="list-domain">.de</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gr.png" alt="Görögország" class="list-flag">
+                    <span class="list-country-name">Görögország</span>
+                    <span class="list-domain">.gr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/hu.png" alt="Magyarország" class="list-flag">
+                    <span class="list-country-name">Magyarország</span>
+                    <span class="list-domain">.hu</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/is.png" alt="Izland" class="list-flag">
+                    <span class="list-country-name">Izland</span>
+                    <span class="list-domain">.is</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ie.png" alt="Írország" class="list-flag">
+                    <span class="list-country-name">Írország</span>
+                    <span class="list-domain">.ie</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/it.png" alt="Olaszország" class="list-flag">
+                    <span class="list-country-name">Olaszország</span>
+                    <span class="list-domain">.it</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/xk.png" alt="Koszovó" class="list-flag">
+                    <span class="list-country-name">Koszovó</span>
+                    <span class="list-domain">.xk</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/lv.png" alt="Lettország" class="list-flag">
+                    <span class="list-country-name">Lettország</span>
+                    <span class="list-domain">.lv</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/li.png" alt="Liechtenstein" class="list-flag">
+                    <span class="list-country-name">Liechtenstein</span>
+                    <span class="list-domain">.li</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/lt.png" alt="Litvánia" class="list-flag">
+                    <span class="list-country-name">Litvánia</span>
+                    <span class="list-domain">.lt</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/lu.png" alt="Luxemburg" class="list-flag">
+                    <span class="list-country-name">Luxemburg</span>
+                    <span class="list-domain">.lu</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mk.png" alt="Észak-Macedónia" class="list-flag">
+                    <span class="list-country-name">Észak-Macedónia</span>
+                    <span class="list-domain">.mk</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mt.png" alt="Málta" class="list-flag">
+                    <span class="list-country-name">Málta</span>
+                    <span class="list-domain">.mt</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/md.png" alt="Moldova" class="list-flag">
+                    <span class="list-country-name">Moldova</span>
+                    <span class="list-domain">.md</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mc.png" alt="Monaco" class="list-flag">
+                    <span class="list-country-name">Monaco</span>
+                    <span class="list-domain">.mc</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/me.png" alt="Montenegró" class="list-flag">
+                    <span class="list-country-name">Montenegró</span>
+                    <span class="list-domain">.me</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/nl.png" alt="Hollandia" class="list-flag">
+                    <span class="list-country-name">Hollandia</span>
+                    <span class="list-domain">.nl</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/no.png" alt="Norvégia" class="list-flag">
+                    <span class="list-country-name">Norvégia</span>
+                    <span class="list-domain">.no</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/pl.png" alt="Lengyelország" class="list-flag">
+                    <span class="list-country-name">Lengyelország</span>
+                    <span class="list-domain">.pl</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/pt.png" alt="Portugália" class="list-flag">
+                    <span class="list-country-name">Portugália</span>
+                    <span class="list-domain">.pt</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ro.png" alt="Románia" class="list-flag">
+                    <span class="list-country-name">Románia</span>
+                    <span class="list-domain">.ro</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ru.png" alt="Oroszország" class="list-flag">
+                    <span class="list-country-name">Oroszország</span>
+                    <span class="list-domain">.ru</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sm.png" alt="San Marino" class="list-flag">
+                    <span class="list-country-name">San Marino</span>
+                    <span class="list-domain">.sm</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/rs.png" alt="Szerbia" class="list-flag">
+                    <span class="list-country-name">Szerbia</span>
+                    <span class="list-domain">.rs</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sk.png" alt="Szlovákia" class="list-flag">
+                    <span class="list-country-name">Szlovákia</span>
+                    <span class="list-domain">.sk</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/si.png" alt="Szlovénia" class="list-flag">
+                    <span class="list-country-name">Szlovénia</span>
+                    <span class="list-domain">.si</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/es.png" alt="Spanyolország" class="list-flag">
+                    <span class="list-country-name">Spanyolország</span>
+                    <span class="list-domain">.es</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/se.png" alt="Svédország" class="list-flag">
+                    <span class="list-country-name">Svédország</span>
+                    <span class="list-domain">.se</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ch.png" alt="Svájc" class="list-flag">
+                    <span class="list-country-name">Svájc</span>
+                    <span class="list-domain">.ch</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ua.png" alt="Ukrajna" class="list-flag">
+                    <span class="list-country-name">Ukrajna</span>
+                    <span class="list-domain">.ua</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gb.png" alt="Egyesült Királyság" class="list-flag">
+                    <span class="list-country-name">Egyesült Királyság</span>
+                    <span class="list-domain">.uk</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/va.png" alt="Vatikán" class="list-flag">
+                    <span class="list-country-name">Vatikán</span>
+                    <span class="list-domain">.va</span>
+                </div>
+                
+                
+                <h3>🇦🇺 Óceánia (15 ország)</h3>
+                <div class="list-item">
+                    <img src="flags/au.png" alt="Ausztrália" class="list-flag">
+                    <span class="list-country-name">Ausztrália</span>
+                    <span class="list-domain">.au</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/nz.png" alt="Új-Zéland" class="list-flag">
+                    <span class="list-country-name">Új-Zéland</span>
+                    <span class="list-domain">.nz</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/pg.png" alt="Pápua Új-Guinea" class="list-flag">
+                    <span class="list-country-name">Pápua Új-Guinea</span>
+                    <span class="list-domain">.pg</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/fj.png" alt="Fidzsi" class="list-flag">
+                    <span class="list-country-name">Fidzsi</span>
+                    <span class="list-domain">.fj</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sb.png" alt="Salamon-szigetek" class="list-flag">
+                    <span class="list-country-name">Salamon-szigetek</span>
+                    <span class="list-domain">.sb</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/vu.png" alt="Vanuatu" class="list-flag">
+                    <span class="list-country-name">Vanuatu</span>
+                    <span class="list-domain">.vu</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/nc.png" alt="Új-Kaledónia" class="list-flag">
+                    <span class="list-country-name">Új-Kaledónia</span>
+                    <span class="list-domain">.nc</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/fm.png" alt="Mikronézia" class="list-flag">
+                    <span class="list-country-name">Mikronézia</span>
+                    <span class="list-domain">.fm</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mh.png" alt="Marshall-szigetek" class="list-flag">
+                    <span class="list-country-name">Marshall-szigetek</span>
+                    <span class="list-domain">.mh</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/pw.png" alt="Palau" class="list-flag">
+                    <span class="list-country-name">Palau</span>
+                    <span class="list-domain">.pw</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/nr.png" alt="Nauru" class="list-flag">
+                    <span class="list-country-name">Nauru</span>
+                    <span class="list-domain">.nr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ki.png" alt="Kiribati" class="list-flag">
+                    <span class="list-country-name">Kiribati</span>
+                    <span class="list-domain">.ki</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tv.png" alt="Tuvalu" class="list-flag">
+                    <span class="list-country-name">Tuvalu</span>
+                    <span class="list-domain">.tv</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ws.png" alt="Szamoa" class="list-flag">
+                    <span class="list-country-name">Szamoa</span>
+                    <span class="list-domain">.ws</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/to.png" alt="Tonga" class="list-flag">
+                    <span class="list-country-name">Tonga</span>
+                    <span class="list-domain">.to</span>
+                </div>
+                
+                <h3>🌍 Afrika (54 ország)</h3>
+                <div class="list-item">
+                    <img src="flags/dz.png" alt="Algéria" class="list-flag">
+                    <span class="list-country-name">Algéria</span>
+                    <span class="list-domain">.dz</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ao.png" alt="Angola" class="list-flag">
+                    <span class="list-country-name">Angola</span>
+                    <span class="list-domain">.ao</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bj.png" alt="Benin" class="list-flag">
+                    <span class="list-country-name">Benin</span>
+                    <span class="list-domain">.bj</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bw.png" alt="Botswana" class="list-flag">
+                    <span class="list-country-name">Botswana</span>
+                    <span class="list-domain">.bw</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bf.png" alt="Burkina Faso" class="list-flag">
+                    <span class="list-country-name">Burkina Faso</span>
+                    <span class="list-domain">.bf</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bi.png" alt="Burundi" class="list-flag">
+                    <span class="list-country-name">Burundi</span>
+                    <span class="list-domain">.bi</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cv.png" alt="Zöld-foki Köztársaság" class="list-flag">
+                    <span class="list-country-name">Zöld-foki Köztársaság</span>
+                    <span class="list-domain">.cv</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cm.png" alt="Kamerun" class="list-flag">
+                    <span class="list-country-name">Kamerun</span>
+                    <span class="list-domain">.cm</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cf.png" alt="Közép-afrikai Köztársaság" class="list-flag">
+                    <span class="list-country-name">Közép-afrikai Köztársaság</span>
+                    <span class="list-domain">.cf</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/td.png" alt="Csád" class="list-flag">
+                    <span class="list-country-name">Csád</span>
+                    <span class="list-domain">.td</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/km.png" alt="Comore-szigetek" class="list-flag">
+                    <span class="list-country-name">Comore-szigetek</span>
+                    <span class="list-domain">.km</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cg.png" alt="Kongó" class="list-flag">
+                    <span class="list-country-name">Kongó</span>
+                    <span class="list-domain">.cg</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cd.png" alt="Kongói Demokratikus Köztársaság" class="list-flag">
+                    <span class="list-country-name">Kongói Demokratikus Köztársaság</span>
+                    <span class="list-domain">.cd</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ci.png" alt="Elefántcsontpart" class="list-flag">
+                    <span class="list-country-name">Elefántcsontpart</span>
+                    <span class="list-domain">.ci</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/dj.png" alt="Dzsibuti" class="list-flag">
+                    <span class="list-country-name">Dzsibuti</span>
+                    <span class="list-domain">.dj</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/eg.png" alt="Egyiptom" class="list-flag">
+                    <span class="list-country-name">Egyiptom</span>
+                    <span class="list-domain">.eg</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gq.png" alt="Egyenlítői-Guinea" class="list-flag">
+                    <span class="list-country-name">Egyenlítői-Guinea</span>
+                    <span class="list-domain">.gq</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/er.png" alt="Eritrea" class="list-flag">
+                    <span class="list-country-name">Eritrea</span>
+                    <span class="list-domain">.er</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sz.png" alt="Eswatini" class="list-flag">
+                    <span class="list-country-name">Eswatini</span>
+                    <span class="list-domain">.sz</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/et.png" alt="Etiópia" class="list-flag">
+                    <span class="list-country-name">Etiópia</span>
+                    <span class="list-domain">.et</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ga.png" alt="Gabon" class="list-flag">
+                    <span class="list-country-name">Gabon</span>
+                    <span class="list-domain">.ga</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gm.png" alt="Gambia" class="list-flag">
+                    <span class="list-country-name">Gambia</span>
+                    <span class="list-domain">.gm</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gh.png" alt="Ghána" class="list-flag">
+                    <span class="list-country-name">Ghána</span>
+                    <span class="list-domain">.gh</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gn.png" alt="Guinea" class="list-flag">
+                    <span class="list-country-name">Guinea</span>
+                    <span class="list-domain">.gn</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gw.png" alt="Guinea-Bissau" class="list-flag">
+                    <span class="list-country-name">Guinea-Bissau</span>
+                    <span class="list-domain">.gw</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ke.png" alt="Kenya" class="list-flag">
+                    <span class="list-country-name">Kenya</span>
+                    <span class="list-domain">.ke</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ls.png" alt="Lesotho" class="list-flag">
+                    <span class="list-country-name">Lesotho</span>
+                    <span class="list-domain">.ls</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/lr.png" alt="Libéria" class="list-flag">
+                    <span class="list-country-name">Libéria</span>
+                    <span class="list-domain">.lr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ly.png" alt="Líbia" class="list-flag">
+                    <span class="list-country-name">Líbia</span>
+                    <span class="list-domain">.ly</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mg.png" alt="Madagaszkár" class="list-flag">
+                    <span class="list-country-name">Madagaszkár</span>
+                    <span class="list-domain">.mg</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mw.png" alt="Malawi" class="list-flag">
+                    <span class="list-country-name">Malawi</span>
+                    <span class="list-domain">.mw</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ml.png" alt="Mali" class="list-flag">
+                    <span class="list-country-name">Mali</span>
+                    <span class="list-domain">.ml</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mr.png" alt="Mauritánia" class="list-flag">
+                    <span class="list-country-name">Mauritánia</span>
+                    <span class="list-domain">.mr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mu.png" alt="Mauritius" class="list-flag">
+                    <span class="list-country-name">Mauritius</span>
+                    <span class="list-domain">.mu</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ma.png" alt="Marokkó" class="list-flag">
+                    <span class="list-country-name">Marokkó</span>
+                    <span class="list-domain">.ma</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mz.png" alt="Mozambik" class="list-flag">
+                    <span class="list-country-name">Mozambik</span>
+                    <span class="list-domain">.mz</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/na.png" alt="Namíbia" class="list-flag">
+                    <span class="list-country-name">Namíbia</span>
+                    <span class="list-domain">.na</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ne.png" alt="Niger" class="list-flag">
+                    <span class="list-country-name">Niger</span>
+                    <span class="list-domain">.ne</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ng.png" alt="Nigéria" class="list-flag">
+                    <span class="list-country-name">Nigéria</span>
+                    <span class="list-domain">.ng</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/rw.png" alt="Ruanda" class="list-flag">
+                    <span class="list-country-name">Ruanda</span>
+                    <span class="list-domain">.rw</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/st.png" alt="São Tomé és Príncipe" class="list-flag">
+                    <span class="list-country-name">São Tomé és Príncipe</span>
+                    <span class="list-domain">.st</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sn.png" alt="Szenegál" class="list-flag">
+                    <span class="list-country-name">Szenegál</span>
+                    <span class="list-domain">.sn</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sc.png" alt="Seychelle-szigetek" class="list-flag">
+                    <span class="list-country-name">Seychelle-szigetek</span>
+                    <span class="list-domain">.sc</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sl.png" alt="Sierra Leone" class="list-flag">
+                    <span class="list-country-name">Sierra Leone</span>
+                    <span class="list-domain">.sl</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/so.png" alt="Szomália" class="list-flag">
+                    <span class="list-country-name">Szomália</span>
+                    <span class="list-domain">.so</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/za.png" alt="Dél-Afrika" class="list-flag">
+                    <span class="list-country-name">Dél-Afrika</span>
+                    <span class="list-domain">.za</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ss.png" alt="Dél-Szudán" class="list-flag">
+                    <span class="list-country-name">Dél-Szudán</span>
+                    <span class="list-domain">.ss</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sd.png" alt="Szudán" class="list-flag">
+                    <span class="list-country-name">Szudán</span>
+                    <span class="list-domain">.sd</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tz.png" alt="Tanzánia" class="list-flag">
+                    <span class="list-country-name">Tanzánia</span>
+                    <span class="list-domain">.tz</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tg.png" alt="Togo" class="list-flag">
+                    <span class="list-country-name">Togo</span>
+                    <span class="list-domain">.tg</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tn.png" alt="Tunézia" class="list-flag">
+                    <span class="list-country-name">Tunézia</span>
+                    <span class="list-domain">.tn</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ug.png" alt="Uganda" class="list-flag">
+                    <span class="list-country-name">Uganda</span>
+                    <span class="list-domain">.ug</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/zm.png" alt="Zambia" class="list-flag">
+                    <span class="list-country-name">Zambia</span>
+                    <span class="list-domain">.zm</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/zw.png" alt="Zimbabwe" class="list-flag">
+                    <span class="list-country-name">Zimbabwe</span>
+                    <span class="list-domain">.zw</span>
+                </div>
+                
+                <h3>🌏 Ázsia (48 ország)</h3>
+                <div class="list-item">
+                    <img src="flags/af.png" alt="Afganisztán" class="list-flag">
+                    <span class="list-country-name">Afganisztán</span>
+                    <span class="list-domain">.af</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/am.png" alt="Örményország" class="list-flag">
+                    <span class="list-country-name">Örményország</span>
+                    <span class="list-domain">.am</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/az.png" alt="Azerbajdzsán" class="list-flag">
+                    <span class="list-country-name">Azerbajdzsán</span>
+                    <span class="list-domain">.az</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bh.png" alt="Bahrein" class="list-flag">
+                    <span class="list-country-name">Bahrein</span>
+                    <span class="list-domain">.bh</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bd.png" alt="Banglades" class="list-flag">
+                    <span class="list-country-name">Banglades</span>
+                    <span class="list-domain">.bd</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bt.png" alt="Bhután" class="list-flag">
+                    <span class="list-country-name">Bhután</span>
+                    <span class="list-domain">.bt</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bn.png" alt="Brunei" class="list-flag">
+                    <span class="list-country-name">Brunei</span>
+                    <span class="list-domain">.bn</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/kh.png" alt="Kambodzsa" class="list-flag">
+                    <span class="list-country-name">Kambodzsa</span>
+                    <span class="list-domain">.kh</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cn.png" alt="Kína" class="list-flag">
+                    <span class="list-country-name">Kína</span>
+                    <span class="list-domain">.cn</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cy.png" alt="Ciprus" class="list-flag">
+                    <span class="list-country-name">Ciprus</span>
+                    <span class="list-domain">.cy</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ge.png" alt="Grúzia" class="list-flag">
+                    <span class="list-country-name">Grúzia</span>
+                    <span class="list-domain">.ge</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/in.png" alt="India" class="list-flag">
+                    <span class="list-country-name">India</span>
+                    <span class="list-domain">.in</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/id.png" alt="Indonézia" class="list-flag">
+                    <span class="list-country-name">Indonézia</span>
+                    <span class="list-domain">.id</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ir.png" alt="Irán" class="list-flag">
+                    <span class="list-country-name">Irán</span>
+                    <span class="list-domain">.ir</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/iq.png" alt="Irak" class="list-flag">
+                    <span class="list-country-name">Irak</span>
+                    <span class="list-domain">.iq</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/il.png" alt="Izrael" class="list-flag">
+                    <span class="list-country-name">Izrael</span>
+                    <span class="list-domain">.il</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/jp.png" alt="Japán" class="list-flag">
+                    <span class="list-country-name">Japán</span>
+                    <span class="list-domain">.jp</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/jo.png" alt="Jordánia" class="list-flag">
+                    <span class="list-country-name">Jordánia</span>
+                    <span class="list-domain">.jo</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/kz.png" alt="Kazahsztán" class="list-flag">
+                    <span class="list-country-name">Kazahsztán</span>
+                    <span class="list-domain">.kz</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/kw.png" alt="Kuvait" class="list-flag">
+                    <span class="list-country-name">Kuvait</span>
+                    <span class="list-domain">.kw</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/kg.png" alt="Kirgizisztán" class="list-flag">
+                    <span class="list-country-name">Kirgizisztán</span>
+                    <span class="list-domain">.kg</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/la.png" alt="Laosz" class="list-flag">
+                    <span class="list-country-name">Laosz</span>
+                    <span class="list-domain">.la</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/lb.png" alt="Libanon" class="list-flag">
+                    <span class="list-country-name">Libanon</span>
+                    <span class="list-domain">.lb</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/my.png" alt="Malajzia" class="list-flag">
+                    <span class="list-country-name">Malajzia</span>
+                    <span class="list-domain">.my</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mv.png" alt="Maldív-szigetek" class="list-flag">
+                    <span class="list-country-name">Maldív-szigetek</span>
+                    <span class="list-domain">.mv</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mn.png" alt="Mongólia" class="list-flag">
+                    <span class="list-country-name">Mongólia</span>
+                    <span class="list-domain">.mn</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mm.png" alt="Mianmar" class="list-flag">
+                    <span class="list-country-name">Mianmar</span>
+                    <span class="list-domain">.mm</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/np.png" alt="Nepál" class="list-flag">
+                    <span class="list-country-name">Nepál</span>
+                    <span class="list-domain">.np</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/kp.png" alt="Észak-Korea" class="list-flag">
+                    <span class="list-country-name">Észak-Korea</span>
+                    <span class="list-domain">.kp</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/om.png" alt="Omán" class="list-flag">
+                    <span class="list-country-name">Omán</span>
+                    <span class="list-domain">.om</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/pk.png" alt="Pakisztán" class="list-flag">
+                    <span class="list-country-name">Pakisztán</span>
+                    <span class="list-domain">.pk</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ps.png" alt="Palesztina" class="list-flag">
+                    <span class="list-country-name">Palesztina</span>
+                    <span class="list-domain">.ps</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ph.png" alt="Fülöp-szigetek" class="list-flag">
+                    <span class="list-country-name">Fülöp-szigetek</span>
+                    <span class="list-domain">.ph</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/qa.png" alt="Katar" class="list-flag">
+                    <span class="list-country-name">Katar</span>
+                    <span class="list-domain">.qa</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ru.png" alt="Oroszország" class="list-flag">
+                    <span class="list-country-name">Oroszország</span>
+                    <span class="list-domain">.ru</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sa.png" alt="Szaúd-Arábia" class="list-flag">
+                    <span class="list-country-name">Szaúd-Arábia</span>
+                    <span class="list-domain">.sa</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sg.png" alt="Szingapúr" class="list-flag">
+                    <span class="list-country-name">Szingapúr</span>
+                    <span class="list-domain">.sg</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/kr.png" alt="Dél-Korea" class="list-flag">
+                    <span class="list-country-name">Dél-Korea</span>
+                    <span class="list-domain">.kr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/lk.png" alt="Srí Lanka" class="list-flag">
+                    <span class="list-country-name">Srí Lanka</span>
+                    <span class="list-domain">.lk</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sy.png" alt="Szíria" class="list-flag">
+                    <span class="list-country-name">Szíria</span>
+                    <span class="list-domain">.sy</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tw.png" alt="Tajvan" class="list-flag">
+                    <span class="list-country-name">Tajvan</span>
+                    <span class="list-domain">.tw</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tj.png" alt="Tádzsikisztán" class="list-flag">
+                    <span class="list-country-name">Tádzsikisztán</span>
+                    <span class="list-domain">.tj</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/th.png" alt="Thaiföld" class="list-flag">
+                    <span class="list-country-name">Thaiföld</span>
+                    <span class="list-domain">.th</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tl.png" alt="Kelet-Timor" class="list-flag">
+                    <span class="list-country-name">Kelet-Timor</span>
+                    <span class="list-domain">.tl</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tr.png" alt="Törökország" class="list-flag">
+                    <span class="list-country-name">Törökország</span>
+                    <span class="list-domain">.tr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tm.png" alt="Türkmenisztán" class="list-flag">
+                    <span class="list-country-name">Türkmenisztán</span>
+                    <span class="list-domain">.tm</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ae.png" alt="Egyesült Arab Emírségek" class="list-flag">
+                    <span class="list-country-name">Egyesült Arab Emírségek</span>
+                    <span class="list-domain">.ae</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/uz.png" alt="Üzbegisztán" class="list-flag">
+                    <span class="list-country-name">Üzbegisztán</span>
+                    <span class="list-domain">.uz</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/vn.png" alt="Vietnam" class="list-flag">
+                    <span class="list-country-name">Vietnam</span>
+                    <span class="list-domain">.vn</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ye.png" alt="Jemen" class="list-flag">
+                    <span class="list-country-name">Jemen</span>
+                    <span class="list-domain">.ye</span>
+                </div>
+                
+                <h3>🌎 Észak-Amerika (23 ország)</h3>
+                <div class="list-item">
+                    <img src="flags/ag.png" alt="Antigua és Barbuda" class="list-flag">
+                    <span class="list-country-name">Antigua és Barbuda</span>
+                    <span class="list-domain">.ag</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bs.png" alt="Bahama-szigetek" class="list-flag">
+                    <span class="list-country-name">Bahama-szigetek</span>
+                    <span class="list-domain">.bs</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bb.png" alt="Barbados" class="list-flag">
+                    <span class="list-country-name">Barbados</span>
+                    <span class="list-domain">.bb</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bz.png" alt="Belize" class="list-flag">
+                    <span class="list-country-name">Belize</span>
+                    <span class="list-domain">.bz</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ca.png" alt="Kanada" class="list-flag">
+                    <span class="list-country-name">Kanada</span>
+                    <span class="list-domain">.ca</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cr.png" alt="Costa Rica" class="list-flag">
+                    <span class="list-country-name">Costa Rica</span>
+                    <span class="list-domain">.cr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cu.png" alt="Kuba" class="list-flag">
+                    <span class="list-country-name">Kuba</span>
+                    <span class="list-domain">.cu</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/dm.png" alt="Dominika" class="list-flag">
+                    <span class="list-country-name">Dominika</span>
+                    <span class="list-domain">.dm</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/do.png" alt="Dominikai Köztársaság" class="list-flag">
+                    <span class="list-country-name">Dominikai Köztársaság</span>
+                    <span class="list-domain">.do</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sv.png" alt="Salvador" class="list-flag">
+                    <span class="list-country-name">Salvador</span>
+                    <span class="list-domain">.sv</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gd.png" alt="Grenada" class="list-flag">
+                    <span class="list-country-name">Grenada</span>
+                    <span class="list-domain">.gd</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gt.png" alt="Guatemala" class="list-flag">
+                    <span class="list-country-name">Guatemala</span>
+                    <span class="list-domain">.gt</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ht.png" alt="Haiti" class="list-flag">
+                    <span class="list-country-name">Haiti</span>
+                    <span class="list-domain">.ht</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/hn.png" alt="Honduras" class="list-flag">
+                    <span class="list-country-name">Honduras</span>
+                    <span class="list-domain">.hn</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/jm.png" alt="Jamaica" class="list-flag">
+                    <span class="list-country-name">Jamaica</span>
+                    <span class="list-domain">.jm</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/mx.png" alt="Mexikó" class="list-flag">
+                    <span class="list-country-name">Mexikó</span>
+                    <span class="list-domain">.mx</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ni.png" alt="Nicaragua" class="list-flag">
+                    <span class="list-country-name">Nicaragua</span>
+                    <span class="list-domain">.ni</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/pa.png" alt="Panama" class="list-flag">
+                    <span class="list-country-name">Panama</span>
+                    <span class="list-domain">.pa</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/kn.png" alt="Saint Kitts és Nevis" class="list-flag">
+                    <span class="list-country-name">Saint Kitts és Nevis</span>
+                    <span class="list-domain">.kn</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/lc.png" alt="Saint Lucia" class="list-flag">
+                    <span class="list-country-name">Saint Lucia</span>
+                    <span class="list-domain">.lc</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/vc.png" alt="Saint Vincent és a Grenadine-szigetek" class="list-flag">
+                    <span class="list-country-name">Saint Vincent és a Grenadine-szigetek</span>
+                    <span class="list-domain">.vc</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/tt.png" alt="Trinidad és Tobago" class="list-flag">
+                    <span class="list-country-name">Trinidad és Tobago</span>
+                    <span class="list-domain">.tt</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/us.png" alt="Egyesült Államok" class="list-flag">
+                    <span class="list-country-name">Egyesült Államok</span>
+                    <span class="list-domain">.us</span>
+                </div>
+                
+                <h3>🌎 Dél-Amerika (12 ország)</h3>
+                <div class="list-item">
+                    <img src="flags/ar.png" alt="Argentína" class="list-flag">
+                    <span class="list-country-name">Argentína</span>
+                    <span class="list-domain">.ar</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/bo.png" alt="Bolívia" class="list-flag">
+                    <span class="list-country-name">Bolívia</span>
+                    <span class="list-domain">.bo</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/br.png" alt="Brazília" class="list-flag">
+                    <span class="list-country-name">Brazília</span>
+                    <span class="list-domain">.br</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/cl.png" alt="Chile" class="list-flag">
+                    <span class="list-country-name">Chile</span>
+                    <span class="list-domain">.cl</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/co.png" alt="Kolumbia" class="list-flag">
+                    <span class="list-country-name">Kolumbia</span>
+                    <span class="list-domain">.co</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ec.png" alt="Ecuador" class="list-flag">
+                    <span class="list-country-name">Ecuador</span>
+                    <span class="list-domain">.ec</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/fk.png" alt="Falkland-szigetek" class="list-flag">
+                    <span class="list-country-name">Falkland-szigetek</span>
+                    <span class="list-domain">.fk</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gf.png" alt="Francia Guyana" class="list-flag">
+                    <span class="list-country-name">Francia Guyana</span>
+                    <span class="list-domain">.gf</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/gy.png" alt="Guyana" class="list-flag">
+                    <span class="list-country-name">Guyana</span>
+                    <span class="list-domain">.gy</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/py.png" alt="Paraguay" class="list-flag">
+                    <span class="list-country-name">Paraguay</span>
+                    <span class="list-domain">.py</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/pe.png" alt="Peru" class="list-flag">
+                    <span class="list-country-name">Peru</span>
+                    <span class="list-domain">.pe</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/sr.png" alt="Suriname" class="list-flag">
+                    <span class="list-country-name">Suriname</span>
+                    <span class="list-domain">.sr</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/uy.png" alt="Uruguay" class="list-flag">
+                    <span class="list-country-name">Uruguay</span>
+                    <span class="list-domain">.uy</span>
+                </div>
+                <div class="list-item">
+                    <img src="flags/ve.png" alt="Venezuela" class="list-flag">
+                    <span class="list-country-name">Venezuela</span>
+                    <span class="list-domain">.ve</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterCountryList() {
+            const searchTerm = document.getElementById('country-search').value.toLowerCase();
+            const listItems = document.querySelectorAll('.list-item');
+            
+            listItems.forEach(item => {
+                const countryName = item.querySelector('.list-country-name').textContent.toLowerCase();
+                const domain = item.querySelector('.list-domain').textContent.toLowerCase();
+                
+                if (countryName.includes(searchTerm) || domain.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

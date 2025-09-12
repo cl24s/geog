@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zászlók - Geo Guesser Segítő</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏁 Zászlók</h1>
+            <p>Zászlók felismerése GeoGuesser játékhoz</p>
+        </header>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="asian-languages.html">Nyelvek</a></li>
+                <li><a href="flags.html">Zászlók</a></li>
+                <li><a href="countries-list.html">Összes országok</a></li>
+            </ul>
+        </nav>
+        
+        <div class="sub-nav">
+            <ul>
+                <li><a href="#" onclick="showFlagSection('europe')" class="active">Európa</a></li>
+                <li><a href="#" onclick="showFlagSection('asia')">Ázsia</a></li>
+                <li><a href="#" onclick="showFlagSection('africa')">Afrika</a></li>
+                <li><a href="#" onclick="showFlagSection('north-america')">Észak-Amerika</a></li>
+                <li><a href="#" onclick="showFlagSection('south-america')">Dél-Amerika</a></li>
+                <li><a href="#" onclick="showFlagSection('oceania')">Óceánia</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div id="europe" class="flag-section active">
+                <div class="section-header">
+                    <h2>Európai zászlók</h2>
+                    <div class="region-filter">
+                        <button class="filter-btn active" onclick="filterRegion('all')">mind</button>
+                        <button class="filter-btn" onclick="filterRegion('west')">nyugat-európa</button>
+                        <button class="filter-btn" onclick="filterRegion('north')">észak</button>
+                        <button class="filter-btn" onclick="filterRegion('central')">közép</button>
+                        <button class="filter-btn" onclick="filterRegion('south')">dél</button>
+                        <button class="filter-btn" onclick="filterRegion('east')">kelet</button>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/ad.png" alt="Andorra" class="flag-image">
+                        <div class="country-name">Andorra</div>
+                        <div class="common-chars">Català Español Français</div>
+                        <div class="domain-extension">.ad</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/al.png" alt="Albánia" class="flag-image">
+                        <div class="country-name">Albánia</div>
+                        <div class="common-chars">Shqip ë ç dhe për</div>
+                        <div class="domain-extension">.al</div>
+                    </div>
+                    <div class="flag-card" data-region="central">
+                        <img src="flags/at.png" alt="Ausztria" class="flag-image">
+                        <div class="country-name">Ausztria</div>
+                        <div class="common-chars">Deutsch ä ö ü ß der</div>
+                        <div class="domain-extension">.at</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/ba.png" alt="Bosznia-Hercegovina" class="flag-image">
+                        <div class="country-name">Bosznia-Hercegovina</div>
+                        <div class="common-chars">Bosanski ć č ž š đ</div>
+                        <div class="domain-extension">.ba</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/be.png" alt="Belgium" class="flag-image">
+                        <div class="country-name">Belgium</div>
+                        <div class="common-chars">Nederlands Français de</div>
+                        <div class="domain-extension">.be</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/bg.png" alt="Bulgária" class="flag-image">
+                        <div class="country-name">Bulgária</div>
+                        <div class="common-chars">Български ъ я ю щ ж</div>
+                        <div class="domain-extension">.bg</div>
+                    </div>
+                    <div class="flag-card" data-region="east">
+                        <img src="flags/by.png" alt="Fehéroroszország" class="flag-image">
+                        <div class="country-name">Fehéroroszország</div>
+                        <div class="common-chars">Беларуская ў і э я</div>
+                        <div class="domain-extension">.by</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/ch.png" alt="Svájc" class="flag-image">
+                        <div class="country-name">Svájc</div>
+                        <div class="common-chars">Deutsch Français Italiano</div>
+                        <div class="domain-extension">.ch</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/cy.png" alt="Ciprus" class="flag-image">
+                        <div class="country-name">Ciprus</div>
+                        <div class="common-chars">Ελληνικά English α β γ</div>
+                        <div class="domain-extension">.cy</div>
+                    </div>
+                    <div class="flag-card" data-region="central">
+                        <img src="flags/cz.png" alt="Csehország" class="flag-image">
+                        <div class="country-name">Csehország</div>
+                        <div class="common-chars">Čeština č š ž ř ů ě</div>
+                        <div class="domain-extension">.cz</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/de.png" alt="Németország" class="flag-image">
+                        <div class="country-name">Németország</div>
+                        <div class="common-chars">Deutsch ä ö ü ß der</div>
+                        <div class="domain-extension">.de</div>
+                    </div>
+                    <div class="flag-card" data-region="north">
+                        <img src="flags/dk.png" alt="Dánia" class="flag-image">
+                        <div class="country-name">Dánia</div>
+                        <div class="common-chars">Dansk æ ø å og der</div>
+                        <div class="domain-extension">.dk</div>
+                    </div>
+                    <div class="flag-card" data-region="north">
+                        <img src="flags/ee.png" alt="Észtország" class="flag-image">
+                        <div class="country-name">Észtország</div>
+                        <div class="common-chars">Eesti ä ö ü õ ja on</div>
+                        <div class="domain-extension">.ee</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/es.png" alt="Spanyolország" class="flag-image">
+                        <div class="country-name">Spanyolország</div>
+                        <div class="common-chars">Español ñ á é í ó ú</div>
+                        <div class="domain-extension">.es</div>
+                    </div>
+                    <div class="flag-card" data-region="north">
+                        <img src="flags/fi.png" alt="Finnország" class="flag-image">
+                        <div class="country-name">Finnország</div>
+                        <div class="common-chars">Suomi ä ö y ja on</div>
+                        <div class="domain-extension">.fi</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/fr.png" alt="Franciaország" class="flag-image">
+                        <div class="country-name">Franciaország</div>
+                        <div class="common-chars">Français à é è ç ô</div>
+                        <div class="domain-extension">.fr</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/gb.png" alt="Egyesült Királyság" class="flag-image">
+                        <div class="country-name">Egyesült Királyság</div>
+                        <div class="common-chars">English the and of to</div>
+                        <div class="domain-extension">.uk</div>
+                    </div>
+                    <div class="flag-card" data-region="east">
+                        <img src="flags/ge.png" alt="Grúzia" class="flag-image">
+                        <div class="country-name">Grúzia</div>
+                        <div class="common-chars">ქართული ა ე ი ო უ</div>
+                        <div class="domain-extension">.ge</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/gr.png" alt="Görögország" class="flag-image">
+                        <div class="country-name">Görögország</div>
+                        <div class="common-chars">Ελληνικά α β γ δ ε ζ</div>
+                        <div class="domain-extension">.gr</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/hr.png" alt="Horvátország" class="flag-image">
+                        <div class="country-name">Horvátország</div>
+                        <div class="common-chars">Hrvatski ć č ž š đ</div>
+                        <div class="domain-extension">.hr</div>
+                    </div>
+                    <div class="flag-card" data-region="central">
+                        <img src="flags/hu.png" alt="Magyarország" class="flag-image">
+                        <div class="country-name">Magyarország</div>
+                        <div class="common-chars">Magyar á é í ó ú ő ű</div>
+                        <div class="domain-extension">.hu</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/ie.png" alt="Írország" class="flag-image">
+                        <div class="country-name">Írország</div>
+                        <div class="common-chars">English Gaeilge agus</div>
+                        <div class="domain-extension">.ie</div>
+                    </div>
+                    <div class="flag-card" data-region="north">
+                        <img src="flags/is.png" alt="Izland" class="flag-image">
+                        <div class="country-name">Izland</div>
+                        <div class="common-chars">Íslenska á é í ó ú ý</div>
+                        <div class="domain-extension">.is</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/it.png" alt="Olaszország" class="flag-image">
+                        <div class="country-name">Olaszország</div>
+                        <div class="common-chars">Italiano à è é ì ò ù</div>
+                        <div class="domain-extension">.it</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/li.png" alt="Liechtenstein" class="flag-image">
+                        <div class="country-name">Liechtenstein</div>
+                        <div class="common-chars">Deutsch ä ö ü ß der</div>
+                        <div class="domain-extension">.li</div>
+                    </div>
+                    <div class="flag-card" data-region="north">
+                        <img src="flags/lt.png" alt="Litvánia" class="flag-image">
+                        <div class="country-name">Litvánia</div>
+                        <div class="common-chars">Lietuvių ą č ę ė į š ų ū ž</div>
+                        <div class="domain-extension">.lt</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/lu.png" alt="Luxemburg" class="flag-image">
+                        <div class="country-name">Luxemburg</div>
+                        <div class="common-chars">Lëtzebuergesch Français</div>
+                        <div class="domain-extension">.lu</div>
+                    </div>
+                    <div class="flag-card" data-region="north">
+                        <img src="flags/lv.png" alt="Lettország" class="flag-image">
+                        <div class="country-name">Lettország</div>
+                        <div class="common-chars">Latviešu ā č ē ģ ī ķ ļ</div>
+                        <div class="domain-extension">.lv</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/mc.png" alt="Monaco" class="flag-image">
+                        <div class="country-name">Monaco</div>
+                        <div class="common-chars">Français à é è ç ô</div>
+                        <div class="domain-extension">.mc</div>
+                    </div>
+                    <div class="flag-card" data-region="east">
+                        <img src="flags/md.png" alt="Moldova" class="flag-image">
+                        <div class="country-name">Moldova</div>
+                        <div class="common-chars">Română â î ă ș ț</div>
+                        <div class="domain-extension">.md</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/me.png" alt="Montenegró" class="flag-image">
+                        <div class="country-name">Montenegró</div>
+                        <div class="common-chars">Crnogorski ć č ž š đ</div>
+                        <div class="domain-extension">.me</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/mk.png" alt="Észak-Macedónia" class="flag-image">
+                        <div class="country-name">Észak-Macedónia</div>
+                        <div class="common-chars">Македонски ѓ ќ љ џ ѕ</div>
+                        <div class="domain-extension">.mk</div>
+                    </div>
+                    <div class="flag-card" data-region="south">
+                        <img src="flags/mt.png" alt="Málta" class="flag-image">
+                        <div class="country-name">Málta</div>
+                        <div class="common-chars">Malti English ċ ġ ħ ż</div>
+                        <div class="domain-extension">.mt</div>
+                    </div>
+                    <div class="flag-card" data-region="west">
+                        <img src="flags/nl.png" alt="Hollandia" class="flag-image">
+                        <div class="country-name">Hollandia</div>
+                        <div class="common-chars">Nederlands de het van</div>
+                        <div class="domain-extension">.nl</div>
+                    </div>
+                    <div class="flag-card" data-region="north">
+                        <img src="flags/no.png" alt="Norvégia" class="flag-image">
+                        <div class="country-name">Norvégia</div>
+                        <div class="common-chars">Norsk æ ø å og der</div>
+                        <div class="domain-extension">.no</div>
+                    </div>
+                </div>
+                
+                <div class="summary-text">
+                    <h3>Európai országok összefoglalója (44 ország):</h3>
+                    <p><strong>Nyugat-Európa:</strong> Andorra, Belgium, Franciaország, Hollandia, Írország, Liechtenstein, Luxemburg, Monaco, Németország, Egyesült Királyság, Svájc</p>
+                    <p><strong>Észak-Európa:</strong> Dánia, Észtország, Finnország, Izland, Lettország, Litvánia, Norvégia, Svédország</p>
+                    <p><strong>Közép-Európa:</strong> Ausztria, Csehország, Lengyelország, Magyarország, Szlovákia, Szlovénia</p>
+                    <p><strong>Dél-Európa:</strong> Albánia, Bosznia-Hercegovina, Bulgária, Ciprus, Görögország, Horvátország, Olaszország, Észak-Macedónia, Málta, Montenegró, Portugália, Románia, San Marino, Szerbia, Spanyolország, Vatikán</p>
+                    <p><strong>Kelet-Európa:</strong> Fehéroroszország, Grúzia, Koszovó, Moldova, Oroszország, Ukrajna</p>
+                </div>
+            </div>
+            
+            <div id="asia" class="flag-section">
+                <div class="section-header">
+                    <h2>Ázsiai zászlók</h2>
+                    <div class="region-filter">
+                        <button class="filter-btn active" onclick="filterAsiaRegion('all')">mind</button>
+                        <button class="filter-btn" onclick="filterAsiaRegion('east')">kelet-ázsia</button>
+                        <button class="filter-btn" onclick="filterAsiaRegion('southeast')">délkelet-ázsia</button>
+                        <button class="filter-btn" onclick="filterAsiaRegion('south')">dél-ázsia</button>
+                        <button class="filter-btn" onclick="filterAsiaRegion('central')">közép-ázsia</button>
+                        <button class="filter-btn" onclick="filterAsiaRegion('west')">nyugat-ázsia</button>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="flag-card" data-asia-region="east">
+                        <img src="flags/cn.png" alt="Kína" class="flag-image">
+                        <div class="country-name">Kína</div>
+                        <div class="common-chars">中文汉字简体</div>
+                        <div class="domain-extension">.cn</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="east">
+                        <img src="flags/jp.png" alt="Japán" class="flag-image">
+                        <div class="country-name">Japán</div>
+                        <div class="common-chars">漢字ひらがなカタカナ</div>
+                        <div class="domain-extension">.jp</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="east">
+                        <img src="flags/kr.png" alt="Dél-Korea" class="flag-image">
+                        <div class="country-name">Dél-Korea</div>
+                        <div class="common-chars">한국어 한글 ㅏㅓㅗㅜ</div>
+                        <div class="domain-extension">.kr</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="east">
+                        <img src="flags/kp.png" alt="Észak-Korea" class="flag-image">
+                        <div class="country-name">Észak-Korea</div>
+                        <div class="common-chars">한국어 한글 ㅏㅓㅗㅜ</div>
+                        <div class="domain-extension">.kp</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="east">
+                        <img src="flags/mn.png" alt="Mongólia" class="flag-image">
+                        <div class="country-name">Mongólia</div>
+                        <div class="common-chars">Монгол бичиг дээр</div>
+                        <div class="domain-extension">.mn</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="east">
+                        <img src="flags/tw.png" alt="Tajvan" class="flag-image">
+                        <div class="country-name">Tajvan</div>
+                        <div class="common-chars">繁體中文 台灣 的 是</div>
+                        <div class="domain-extension">.tw</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/id.png" alt="Indonézia" class="flag-image">
+                        <div class="country-name">Indonézia</div>
+                        <div class="common-chars">yang dengan tidak</div>
+                        <div class="domain-extension">.id</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/th.png" alt="Thaiföld" class="flag-image">
+                        <div class="country-name">Thaiföld</div>
+                        <div class="common-chars">ภาษาไทย กับ และ</div>
+                        <div class="domain-extension">.th</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/vn.png" alt="Vietnam" class="flag-image">
+                        <div class="country-name">Vietnam</div>
+                        <div class="common-chars">Tiếng Việt ă â ê ô ư đ</div>
+                        <div class="domain-extension">.vn</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/ph.png" alt="Fülöp-szigetek" class="flag-image">
+                        <div class="country-name">Fülöp-szigetek</div>
+                        <div class="common-chars">English Filipino ng</div>
+                        <div class="domain-extension">.ph</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/my.png" alt="Malajzia" class="flag-image">
+                        <div class="country-name">Malajzia</div>
+                        <div class="common-chars">Malaysia untuk dengan</div>
+                        <div class="domain-extension">.my</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/sg.png" alt="Szingapúr" class="flag-image">
+                        <div class="country-name">Szingapúr</div>
+                        <div class="common-chars">English 中文 Melayu தமிழ்</div>
+                        <div class="domain-extension">.sg</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/mm.png" alt="Mianmar" class="flag-image">
+                        <div class="country-name">Mianmar</div>
+                        <div class="common-chars">မြန်မာ ဘာသာ ရေး</div>
+                        <div class="domain-extension">.mm</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/kh.png" alt="Kambodzsa" class="flag-image">
+                        <div class="country-name">Kambodzsa</div>
+                        <div class="common-chars">ភាសាខ្មែរ នៃ ជា</div>
+                        <div class="domain-extension">.kh</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/la.png" alt="Laosz" class="flag-image">
+                        <div class="country-name">Laosz</div>
+                        <div class="common-chars">ພາສາລາວ ແລະ ຂອງ</div>
+                        <div class="domain-extension">.la</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/bn.png" alt="Brunei" class="flag-image">
+                        <div class="country-name">Brunei</div>
+                        <div class="common-chars">Melayu dengan untuk</div>
+                        <div class="domain-extension">.bn</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="southeast">
+                        <img src="flags/tl.png" alt="Kelet-Timor" class="flag-image">
+                        <div class="country-name">Kelet-Timor</div>
+                        <div class="common-chars">Português Tetun ba</div>
+                        <div class="domain-extension">.tl</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="south">
+                        <img src="flags/in.png" alt="India" class="flag-image">
+                        <div class="country-name">India</div>
+                        <div class="common-chars">हिन्दी देवनागरी का है</div>
+                        <div class="domain-extension">.in</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="south">
+                        <img src="flags/pk.png" alt="Pakisztán" class="flag-image">
+                        <div class="country-name">Pakisztán</div>
+                        <div class="common-chars">اردو پاکستان کے میں</div>
+                        <div class="domain-extension">.pk</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="south">
+                        <img src="flags/bd.png" alt="Banglades" class="flag-image">
+                        <div class="country-name">Banglades</div>
+                        <div class="common-chars">বাংলা ভাষা এর হয়</div>
+                        <div class="domain-extension">.bd</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="south">
+                        <img src="flags/lk.png" alt="Srí Lanka" class="flag-image">
+                        <div class="country-name">Srí Lanka</div>
+                        <div class="common-chars">සිංහල Tamil English</div>
+                        <div class="domain-extension">.lk</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="south">
+                        <img src="flags/np.png" alt="Nepál" class="flag-image">
+                        <div class="country-name">Nepál</div>
+                        <div class="common-chars">नेपाली भाषा को छ</div>
+                        <div class="domain-extension">.np</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="south">
+                        <img src="flags/bt.png" alt="Bhután" class="flag-image">
+                        <div class="country-name">Bhután</div>
+                        <div class="common-chars">རྫོང་ཁ་ ཡིག་ཚང་ གི</div>
+                        <div class="domain-extension">.bt</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="south">
+                        <img src="flags/mv.png" alt="Maldív-szigetek" class="flag-image">
+                        <div class="country-name">Maldív-szigetek</div>
+                        <div class="common-chars">ދިވެހި ބަސް އަދި މި</div>
+                        <div class="domain-extension">.mv</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="central">
+                        <img src="flags/kz.png" alt="Kazahsztán" class="flag-image">
+                        <div class="country-name">Kazahsztán</div>
+                        <div class="common-chars">Қазақ тілі жəне бар</div>
+                        <div class="domain-extension">.kz</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="central">
+                        <img src="flags/uz.png" alt="Üzbegisztán" class="flag-image">
+                        <div class="country-name">Üzbegisztán</div>
+                        <div class="common-chars">O'zbek tili va bilan</div>
+                        <div class="domain-extension">.uz</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="central">
+                        <img src="flags/tm.png" alt="Türkmenisztán" class="flag-image">
+                        <div class="country-name">Türkmenisztán</div>
+                        <div class="common-chars">Türkmen dili we bilen</div>
+                        <div class="domain-extension">.tm</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="central">
+                        <img src="flags/kg.png" alt="Kirgizisztán" class="flag-image">
+                        <div class="country-name">Kirgizisztán</div>
+                        <div class="common-chars">Кыргыз тили жана бар</div>
+                        <div class="domain-extension">.kg</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="central">
+                        <img src="flags/tj.png" alt="Tádzsikisztán" class="flag-image">
+                        <div class="country-name">Tádzsikisztán</div>
+                        <div class="common-chars">тоҷикӣ забон ва дар</div>
+                        <div class="domain-extension">.tj</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/tr.png" alt="Törökország" class="flag-image">
+                        <div class="country-name">Törökország</div>
+                        <div class="common-chars">Türkçe dil ve bir</div>
+                        <div class="domain-extension">.tr</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/ir.png" alt="Irán" class="flag-image">
+                        <div class="country-name">Irán</div>
+                        <div class="common-chars">فارسی زبان در که است</div>
+                        <div class="domain-extension">.ir</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/iq.png" alt="Irak" class="flag-image">
+                        <div class="country-name">Irak</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.iq</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/sy.png" alt="Szíria" class="flag-image">
+                        <div class="country-name">Szíria</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.sy</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/lb.png" alt="Libanon" class="flag-image">
+                        <div class="country-name">Libanon</div>
+                        <div class="common-chars">العربية Français في من</div>
+                        <div class="domain-extension">.lb</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/jo.png" alt="Jordánia" class="flag-image">
+                        <div class="country-name">Jordánia</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.jo</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/il.png" alt="Izrael" class="flag-image">
+                        <div class="country-name">Izrael</div>
+                        <div class="common-chars">עברית English את של</div>
+                        <div class="domain-extension">.il</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/ps.png" alt="Palesztina" class="flag-image">
+                        <div class="country-name">Palesztina</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.ps</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/sa.png" alt="Szaúd-Arábia" class="flag-image">
+                        <div class="country-name">Szaúd-Arábia</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.sa</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/ae.png" alt="Egyesült Arab Emírségek" class="flag-image">
+                        <div class="country-name">Egyesült Arab Emírségek</div>
+                        <div class="common-chars">العربية English في من</div>
+                        <div class="domain-extension">.ae</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/kw.png" alt="Kuvait" class="flag-image">
+                        <div class="country-name">Kuvait</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.kw</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/qa.png" alt="Katar" class="flag-image">
+                        <div class="country-name">Katar</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.qa</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/bh.png" alt="Bahrein" class="flag-image">
+                        <div class="country-name">Bahrein</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.bh</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/om.png" alt="Omán" class="flag-image">
+                        <div class="country-name">Omán</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.om</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/ye.png" alt="Jemen" class="flag-image">
+                        <div class="country-name">Jemen</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.ye</div>
+                    </div>
+                    <div class="flag-card" data-asia-region="west">
+                        <img src="flags/af.png" alt="Afganisztán" class="flag-image">
+                        <div class="country-name">Afganisztán</div>
+                        <div class="common-chars">پښتو دری در که است</div>
+                        <div class="domain-extension">.af</div>
+                    </div>
+                </div>
+                
+                <div class="summary-text">
+                    <h3>Ázsiai országok összefoglalója (49 ország):</h3>
+                    <p><strong>Kelet-Ázsia (6):</strong> Kína, Japán, Dél-Korea, Észak-Korea, Mongólia, Tajvan</p>
+                    <p><strong>Délkelet-Ázsia (11):</strong> Indonézia, Thaiföld, Vietnam, Fülöp-szigetek, Malajzia, Szingapúr, Mianmar, Kambodzsa, Laosz, Brunei, Kelet-Timor</p>
+                    <p><strong>Dél-Ázsia (7):</strong> India, Pakisztán, Banglades, Srí Lanka, Nepál, Bhután, Maldív-szigetek</p>
+                    <p><strong>Közép-Ázsia (5):</strong> Kazahsztán, Üzbegisztán, Türkmenisztán, Kirgizisztán, Tádzsikisztán</p>
+                    <p><strong>Nyugat-Ázsia (20):</strong> Törökország, Irán, Irak, Szíria, Libanon, Jordánia, Izrael, Palesztina, Szaúd-Arábia, Egyesült Arab Emírségek, Kuvait, Katar, Bahrein, Omán, Jemen, Afganisztán</p>
+                </div>
+            </div>
+            
+            <div id="africa" class="flag-section">
+                <div class="section-header">
+                    <h2>Afrikai zászlók</h2>
+                    <div class="region-filter">
+                        <button class="filter-btn active" onclick="filterAfricaRegion('all')">mind</button>
+                        <button class="filter-btn" onclick="filterAfricaRegion('north')">észak-afrika</button>
+                        <button class="filter-btn" onclick="filterAfricaRegion('west')">nyugat-afrika</button>
+                        <button class="filter-btn" onclick="filterAfricaRegion('central')">közép-afrika</button>
+                        <button class="filter-btn" onclick="filterAfricaRegion('east')">kelet-afrika</button>
+                        <button class="filter-btn" onclick="filterAfricaRegion('south')">dél-afrika</button>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="flag-card" data-africa-region="north">
+                        <img src="flags/eg.png" alt="Egyiptom" class="flag-image">
+                        <div class="country-name">Egyiptom</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.eg</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="north">
+                        <img src="flags/ly.png" alt="Líbia" class="flag-image">
+                        <div class="country-name">Líbia</div>
+                        <div class="common-chars">العربية في من على إلى</div>
+                        <div class="domain-extension">.ly</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="north">
+                        <img src="flags/tn.png" alt="Tunézia" class="flag-image">
+                        <div class="country-name">Tunézia</div>
+                        <div class="common-chars">العربية Français في من</div>
+                        <div class="domain-extension">.tn</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="north">
+                        <img src="flags/dz.png" alt="Algéria" class="flag-image">
+                        <div class="country-name">Algéria</div>
+                        <div class="common-chars">العربية Français في من</div>
+                        <div class="domain-extension">.dz</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="north">
+                        <img src="flags/ma.png" alt="Marokkó" class="flag-image">
+                        <div class="country-name">Marokkó</div>
+                        <div class="common-chars">العربية Français في من</div>
+                        <div class="domain-extension">.ma</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="north">
+                        <img src="flags/sd.png" alt="Szudán" class="flag-image">
+                        <div class="country-name">Szudán</div>
+                        <div class="common-chars">العربية English في من</div>
+                        <div class="domain-extension">.sd</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/ng.png" alt="Nigéria" class="flag-image">
+                        <div class="country-name">Nigéria</div>
+                        <div class="common-chars">English Hausa Yoruba</div>
+                        <div class="domain-extension">.ng</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/gh.png" alt="Ghána" class="flag-image">
+                        <div class="country-name">Ghána</div>
+                        <div class="common-chars">English Twi Ga Ewe</div>
+                        <div class="domain-extension">.gh</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/ci.png" alt="Elefántcsontpart" class="flag-image">
+                        <div class="country-name">Elefántcsontpart</div>
+                        <div class="common-chars">Français English Baoulé</div>
+                        <div class="domain-extension">.ci</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/sn.png" alt="Szenegál" class="flag-image">
+                        <div class="country-name">Szenegál</div>
+                        <div class="common-chars">Français Wolof Pulaar</div>
+                        <div class="domain-extension">.sn</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/ml.png" alt="Mali" class="flag-image">
+                        <div class="country-name">Mali</div>
+                        <div class="common-chars">Français Bambara Fulfulde</div>
+                        <div class="domain-extension">.ml</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/bf.png" alt="Burkina Faso" class="flag-image">
+                        <div class="country-name">Burkina Faso</div>
+                        <div class="common-chars">Français Mooré Dioula</div>
+                        <div class="domain-extension">.bf</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/ne.png" alt="Niger" class="flag-image">
+                        <div class="country-name">Niger</div>
+                        <div class="common-chars">Français Hausa Zarma</div>
+                        <div class="domain-extension">.ne</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/gn.png" alt="Guinea" class="flag-image">
+                        <div class="country-name">Guinea</div>
+                        <div class="common-chars">Français Pular Maninka</div>
+                        <div class="domain-extension">.gn</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/sl.png" alt="Sierra Leone" class="flag-image">
+                        <div class="country-name">Sierra Leone</div>
+                        <div class="common-chars">English Krio Mende</div>
+                        <div class="domain-extension">.sl</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/lr.png" alt="Libéria" class="flag-image">
+                        <div class="country-name">Libéria</div>
+                        <div class="common-chars">English Kpelle Bassa</div>
+                        <div class="domain-extension">.lr</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/tg.png" alt="Togo" class="flag-image">
+                        <div class="country-name">Togo</div>
+                        <div class="common-chars">Français Ewe Kabiyé</div>
+                        <div class="domain-extension">.tg</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/bj.png" alt="Benin" class="flag-image">
+                        <div class="country-name">Benin</div>
+                        <div class="common-chars">Français Fon Yoruba</div>
+                        <div class="domain-extension">.bj</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/gw.png" alt="Guinea-Bissau" class="flag-image">
+                        <div class="country-name">Guinea-Bissau</div>
+                        <div class="common-chars">Português Crioulo Balanta</div>
+                        <div class="domain-extension">.gw</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/gm.png" alt="Gambia" class="flag-image">
+                        <div class="country-name">Gambia</div>
+                        <div class="common-chars">English Mandinka Wolof</div>
+                        <div class="domain-extension">.gm</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/cv.png" alt="Zöld-foki Köztársaság" class="flag-image">
+                        <div class="country-name">Zöld-foki Köztársaság</div>
+                        <div class="common-chars">Português Crioulo Kabuverdianu</div>
+                        <div class="domain-extension">.cv</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="central">
+                        <img src="flags/cd.png" alt="Kongói Demokratikus Köztársaság" class="flag-image">
+                        <div class="country-name">Kongói Demokratikus Köztársaság</div>
+                        <div class="common-chars">Français Lingala Kikongo</div>
+                        <div class="domain-extension">.cd</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="central">
+                        <img src="flags/cg.png" alt="Kongói Köztársaság" class="flag-image">
+                        <div class="country-name">Kongói Köztársaság</div>
+                        <div class="common-chars">Français Lingala Kituba</div>
+                        <div class="domain-extension">.cg</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="central">
+                        <img src="flags/cm.png" alt="Kamerun" class="flag-image">
+                        <div class="country-name">Kamerun</div>
+                        <div class="common-chars">Français English Fulfulde</div>
+                        <div class="domain-extension">.cm</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="central">
+                        <img src="flags/cf.png" alt="Közép-afrikai Köztársaság" class="flag-image">
+                        <div class="country-name">Közép-afrikai Köztársaság</div>
+                        <div class="common-chars">Français Sango Lingala</div>
+                        <div class="domain-extension">.cf</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="central">
+                        <img src="flags/td.png" alt="Csád" class="flag-image">
+                        <div class="country-name">Csád</div>
+                        <div class="common-chars">Français العربية Sara</div>
+                        <div class="domain-extension">.td</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="central">
+                        <img src="flags/ga.png" alt="Gabon" class="flag-image">
+                        <div class="country-name">Gabon</div>
+                        <div class="common-chars">Français Fang Myene</div>
+                        <div class="domain-extension">.ga</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="central">
+                        <img src="flags/gq.png" alt="Egyenlítői-Guinea" class="flag-image">
+                        <div class="country-name">Egyenlítői-Guinea</div>
+                        <div class="common-chars">Español Français Fang</div>
+                        <div class="domain-extension">.gq</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="central">
+                        <img src="flags/st.png" alt="São Tomé és Príncipe" class="flag-image">
+                        <div class="country-name">São Tomé és Príncipe</div>
+                        <div class="common-chars">Português Forro Angolar</div>
+                        <div class="domain-extension">.st</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="central">
+                        <img src="flags/ao.png" alt="Angola" class="flag-image">
+                        <div class="country-name">Angola</div>
+                        <div class="common-chars">Português Umbundu Kimbundu</div>
+                        <div class="domain-extension">.ao</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/et.png" alt="Etiópia" class="flag-image">
+                        <div class="country-name">Etiópia</div>
+                        <div class="common-chars">አማርኛ ትግርኛ ኦሮም�</div>
+                        <div class="domain-extension">.et</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/ke.png" alt="Kenya" class="flag-image">
+                        <div class="country-name">Kenya</div>
+                        <div class="common-chars">English Kiswahili Kikuyu</div>
+                        <div class="domain-extension">.ke</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/tz.png" alt="Tanzánia" class="flag-image">
+                        <div class="country-name">Tanzánia</div>
+                        <div class="common-chars">Kiswahili English Sukuma</div>
+                        <div class="domain-extension">.tz</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/ug.png" alt="Uganda" class="flag-image">
+                        <div class="country-name">Uganda</div>
+                        <div class="common-chars">English Luganda Kiswahili</div>
+                        <div class="domain-extension">.ug</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/rw.png" alt="Ruanda" class="flag-image">
+                        <div class="country-name">Ruanda</div>
+                        <div class="common-chars">Kinyarwanda English Français</div>
+                        <div class="domain-extension">.rw</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/bi.png" alt="Burundi" class="flag-image">
+                        <div class="country-name">Burundi</div>
+                        <div class="common-chars">Kirundi Français English</div>
+                        <div class="domain-extension">.bi</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/so.png" alt="Szomália" class="flag-image">
+                        <div class="country-name">Szomália</div>
+                        <div class="common-chars">Soomaali العربية English</div>
+                        <div class="domain-extension">.so</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/dj.png" alt="Dzsibuti" class="flag-image">
+                        <div class="country-name">Dzsibuti</div>
+                        <div class="common-chars">Français العربية Somali</div>
+                        <div class="domain-extension">.dj</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/er.png" alt="Eritrea" class="flag-image">
+                        <div class="country-name">Eritrea</div>
+                        <div class="common-chars">ትግርኛ العربية English</div>
+                        <div class="domain-extension">.er</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="east">
+                        <img src="flags/ss.png" alt="Dél-Szudán" class="flag-image">
+                        <div class="country-name">Dél-Szudán</div>
+                        <div class="common-chars">English العربية Dinka</div>
+                        <div class="domain-extension">.ss</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/za.png" alt="Dél-Afrika" class="flag-image">
+                        <div class="country-name">Dél-Afrika</div>
+                        <div class="common-chars">English Afrikaans Zulu</div>
+                        <div class="domain-extension">.za</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/na.png" alt="Namíbia" class="flag-image">
+                        <div class="country-name">Namíbia</div>
+                        <div class="common-chars">English Afrikaans Oshiwambo</div>
+                        <div class="domain-extension">.na</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/bw.png" alt="Botswana" class="flag-image">
+                        <div class="country-name">Botswana</div>
+                        <div class="common-chars">English Setswana Kalanga</div>
+                        <div class="domain-extension">.bw</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/zw.png" alt="Zimbabwe" class="flag-image">
+                        <div class="country-name">Zimbabwe</div>
+                        <div class="common-chars">English Shona Ndebele</div>
+                        <div class="domain-extension">.zw</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/zm.png" alt="Zambia" class="flag-image">
+                        <div class="country-name">Zambia</div>
+                        <div class="common-chars">English Bemba Nyanja</div>
+                        <div class="domain-extension">.zm</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/mw.png" alt="Malawi" class="flag-image">
+                        <div class="country-name">Malawi</div>
+                        <div class="common-chars">English Chichewa Chinyanja</div>
+                        <div class="domain-extension">.mw</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/mz.png" alt="Mozambik" class="flag-image">
+                        <div class="country-name">Mozambik</div>
+                        <div class="common-chars">Português Makhuwa Tsonga</div>
+                        <div class="domain-extension">.mz</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/mg.png" alt="Madagaszkár" class="flag-image">
+                        <div class="country-name">Madagaszkár</div>
+                        <div class="common-chars">Malagasy Français English</div>
+                        <div class="domain-extension">.mg</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/mu.png" alt="Mauritius" class="flag-image">
+                        <div class="country-name">Mauritius</div>
+                        <div class="common-chars">English Français Creole</div>
+                        <div class="domain-extension">.mu</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/sc.png" alt="Seychelle-szigetek" class="flag-image">
+                        <div class="country-name">Seychelle-szigetek</div>
+                        <div class="common-chars">English Français Creole</div>
+                        <div class="domain-extension">.sc</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/km.png" alt="Comore-szigetek" class="flag-image">
+                        <div class="country-name">Comore-szigetek</div>
+                        <div class="common-chars">العربية Français Comorian</div>
+                        <div class="domain-extension">.km</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/ls.png" alt="Lesotho" class="flag-image">
+                        <div class="country-name">Lesotho</div>
+                        <div class="common-chars">Sesotho English Zulu</div>
+                        <div class="domain-extension">.ls</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="south">
+                        <img src="flags/sz.png" alt="Szváziföld" class="flag-image">
+                        <div class="country-name">Szváziföld</div>
+                        <div class="common-chars">English siSwati Zulu</div>
+                        <div class="domain-extension">.sz</div>
+                    </div>
+                    <div class="flag-card" data-africa-region="west">
+                        <img src="flags/mr.png" alt="Mauritánia" class="flag-image">
+                        <div class="country-name">Mauritánia</div>
+                        <div class="common-chars">العربية Français Pulaar</div>
+                        <div class="domain-extension">.mr</div>
+                    </div>
+                </div>
+                
+                <div class="summary-text">
+                    <h3>Afrikai országok összefoglalója (55 ország):</h3>
+                    <p><strong>Észak-Afrika (6):</strong> Egyiptom, Líbia, Tunézia, Algéria, Marokkó, Szudán</p>
+                    <p><strong>Nyugat-Afrika (16):</strong> Nigéria, Ghána, Elefántcsontpart, Szenegál, Mali, Burkina Faso, Niger, Guinea, Sierra Leone, Libéria, Togo, Benin, Guinea-Bissau, Gambia, Zöld-foki Köztársaság, Mauritánia</p>
+                    <p><strong>Közép-Afrika (9):</strong> Kongói Demokratikus Köztársaság, Kongói Köztársaság, Kamerun, Közép-afrikai Köztársaság, Csád, Gabon, Egyenlítői-Guinea, São Tomé és Príncipe, Angola</p>
+                    <p><strong>Kelet-Afrika (10):</strong> Etiópia, Kenya, Tanzánia, Uganda, Ruanda, Burundi, Szomália, Dzsibuti, Eritrea, Dél-Szudán</p>
+                    <p><strong>Dél-Afrika (14):</strong> Dél-Afrika, Namíbia, Botswana, Zimbabwe, Zambia, Malawi, Mozambik, Madagaszkár, Mauritius, Seychelle-szigetek, Comore-szigetek, Lesotho, Szváziföld</p>
+                </div>
+            </div>
+            
+            <div id="north-america" class="flag-section">
+                <div class="section-header">
+                    <h2>Észak-amerikai zászlók</h2>
+                    <div class="region-filter">
+                        <button class="filter-btn active" onclick="filterNorthAmericaRegion('all')">mind</button>
+                        <button class="filter-btn" onclick="filterNorthAmericaRegion('usa-canada')">usa-kanada</button>
+                        <button class="filter-btn" onclick="filterNorthAmericaRegion('central')">közép-amerika</button>
+                        <button class="filter-btn" onclick="filterNorthAmericaRegion('caribbean')">karib-térség</button>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="flag-card" data-na-region="usa-canada">
+                        <img src="flags/us.png" alt="Egyesült Államok" class="flag-image">
+                        <div class="country-name">Egyesült Államok</div>
+                        <div class="common-chars">English Español the and</div>
+                        <div class="domain-extension">.us</div>
+                    </div>
+                    <div class="flag-card" data-na-region="usa-canada">
+                        <img src="flags/ca.png" alt="Kanada" class="flag-image">
+                        <div class="country-name">Kanada</div>
+                        <div class="common-chars">English Français the de</div>
+                        <div class="domain-extension">.ca</div>
+                    </div>
+                    <div class="flag-card" data-na-region="central">
+                        <img src="flags/mx.png" alt="Mexikó" class="flag-image">
+                        <div class="country-name">Mexikó</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.mx</div>
+                    </div>
+                    <div class="flag-card" data-na-region="central">
+                        <img src="flags/gt.png" alt="Guatemala" class="flag-image">
+                        <div class="country-name">Guatemala</div>
+                        <div class="common-chars">Español K'iche' de la</div>
+                        <div class="domain-extension">.gt</div>
+                    </div>
+                    <div class="flag-card" data-na-region="central">
+                        <img src="flags/bz.png" alt="Belize" class="flag-image">
+                        <div class="country-name">Belize</div>
+                        <div class="common-chars">English Español Creole Maya</div>
+                        <div class="domain-extension">.bz</div>
+                    </div>
+                    <div class="flag-card" data-na-region="central">
+                        <img src="flags/sv.png" alt="Salvador" class="flag-image">
+                        <div class="country-name">Salvador</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.sv</div>
+                    </div>
+                    <div class="flag-card" data-na-region="central">
+                        <img src="flags/hn.png" alt="Honduras" class="flag-image">
+                        <div class="country-name">Honduras</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.hn</div>
+                    </div>
+                    <div class="flag-card" data-na-region="central">
+                        <img src="flags/ni.png" alt="Nicaragua" class="flag-image">
+                        <div class="country-name">Nicaragua</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.ni</div>
+                    </div>
+                    <div class="flag-card" data-na-region="central">
+                        <img src="flags/cr.png" alt="Costa Rica" class="flag-image">
+                        <div class="country-name">Costa Rica</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.cr</div>
+                    </div>
+                    <div class="flag-card" data-na-region="central">
+                        <img src="flags/pa.png" alt="Panama" class="flag-image">
+                        <div class="country-name">Panama</div>
+                        <div class="common-chars">Español English de la</div>
+                        <div class="domain-extension">.pa</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/cu.png" alt="Kuba" class="flag-image">
+                        <div class="country-name">Kuba</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.cu</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/jm.png" alt="Jamaica" class="flag-image">
+                        <div class="country-name">Jamaica</div>
+                        <div class="common-chars">English Patois the and</div>
+                        <div class="domain-extension">.jm</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/ht.png" alt="Haiti" class="flag-image">
+                        <div class="country-name">Haiti</div>
+                        <div class="common-chars">Français Kreyòl de la</div>
+                        <div class="domain-extension">.ht</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/do.png" alt="Dominikai Köztársaság" class="flag-image">
+                        <div class="country-name">Dominikai Köztársaság</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.do</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/bs.png" alt="Bahama-szigetek" class="flag-image">
+                        <div class="country-name">Bahama-szigetek</div>
+                        <div class="common-chars">English the and of</div>
+                        <div class="domain-extension">.bs</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/bb.png" alt="Barbados" class="flag-image">
+                        <div class="country-name">Barbados</div>
+                        <div class="common-chars">English Bajan the and</div>
+                        <div class="domain-extension">.bb</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/tt.png" alt="Trinidad és Tobago" class="flag-image">
+                        <div class="country-name">Trinidad és Tobago</div>
+                        <div class="common-chars">English Hindi the and</div>
+                        <div class="domain-extension">.tt</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/gd.png" alt="Grenada" class="flag-image">
+                        <div class="country-name">Grenada</div>
+                        <div class="common-chars">English the and of</div>
+                        <div class="domain-extension">.gd</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/vc.png" alt="Saint Vincent és Grenadine-szigetek" class="flag-image">
+                        <div class="country-name">Saint Vincent és Grenadine-szigetek</div>
+                        <div class="common-chars">English the and of</div>
+                        <div class="domain-extension">.vc</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/lc.png" alt="Saint Lucia" class="flag-image">
+                        <div class="country-name">Saint Lucia</div>
+                        <div class="common-chars">English Patois the and</div>
+                        <div class="domain-extension">.lc</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/dm.png" alt="Dominica" class="flag-image">
+                        <div class="country-name">Dominica</div>
+                        <div class="common-chars">English Patois the and</div>
+                        <div class="domain-extension">.dm</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/ag.png" alt="Antigua és Barbuda" class="flag-image">
+                        <div class="country-name">Antigua és Barbuda</div>
+                        <div class="common-chars">English the and of</div>
+                        <div class="domain-extension">.ag</div>
+                    </div>
+                    <div class="flag-card" data-na-region="caribbean">
+                        <img src="flags/kn.png" alt="Saint Kitts és Nevis" class="flag-image">
+                        <div class="country-name">Saint Kitts és Nevis</div>
+                        <div class="common-chars">English the and of</div>
+                        <div class="domain-extension">.kn</div>
+                    </div>
+                </div>
+                
+                <div class="summary-text">
+                    <h3>Észak-amerikai országok összefoglalója (23 ország):</h3>
+                    <p><strong>USA-Kanada (2):</strong> Egyesült Államok, Kanada</p>
+                    <p><strong>Közép-Amerika (8):</strong> Mexikó, Guatemala, Belize, Salvador, Honduras, Nicaragua, Costa Rica, Panama</p>
+                    <p><strong>Karib-térség (13):</strong> Kuba, Jamaica, Haiti, Dominikai Köztársaság, Bahama-szigetek, Barbados, Trinidad és Tobago, Grenada, Saint Vincent és Grenadine-szigetek, Saint Lucia, Dominica, Antigua és Barbuda, Saint Kitts és Nevis</p>
+                </div>
+            </div>
+            
+            <div id="south-america" class="flag-section">
+                <div class="section-header">
+                    <h2>Dél-amerikai zászlók</h2>
+                    <div class="region-filter">
+                        <button class="filter-btn active" onclick="filterSouthAmericaRegion('all')">mind</button>
+                        <button class="filter-btn" onclick="filterSouthAmericaRegion('northern')">északi</button>
+                        <button class="filter-btn" onclick="filterSouthAmericaRegion('southern')">déli</button>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="flag-card" data-sa-region="northern">
+                        <img src="flags/br.png" alt="Brazília" class="flag-image">
+                        <div class="country-name">Brazília</div>
+                        <div class="common-chars">Português de da em do</div>
+                        <div class="domain-extension">.br</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="southern">
+                        <img src="flags/ar.png" alt="Argentína" class="flag-image">
+                        <div class="country-name">Argentína</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.ar</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="northern">
+                        <img src="flags/co.png" alt="Kolumbia" class="flag-image">
+                        <div class="country-name">Kolumbia</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.co</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="northern">
+                        <img src="flags/ve.png" alt="Venezuela" class="flag-image">
+                        <div class="country-name">Venezuela</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.ve</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="northern">
+                        <img src="flags/gy.png" alt="Guyana" class="flag-image">
+                        <div class="country-name">Guyana</div>
+                        <div class="common-chars">English Hindi the and</div>
+                        <div class="domain-extension">.gy</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="northern">
+                        <img src="flags/sr.png" alt="Suriname" class="flag-image">
+                        <div class="country-name">Suriname</div>
+                        <div class="common-chars">Nederlands English Sranan</div>
+                        <div class="domain-extension">.sr</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="northern">
+                        <img src="flags/pe.png" alt="Peru" class="flag-image">
+                        <div class="country-name">Peru</div>
+                        <div class="common-chars">Español Quechua de la</div>
+                        <div class="domain-extension">.pe</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="northern">
+                        <img src="flags/ec.png" alt="Ecuador" class="flag-image">
+                        <div class="country-name">Ecuador</div>
+                        <div class="common-chars">Español Quechua de la</div>
+                        <div class="domain-extension">.ec</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="southern">
+                        <img src="flags/bo.png" alt="Bolívia" class="flag-image">
+                        <div class="country-name">Bolívia</div>
+                        <div class="common-chars">Español Quechua de la</div>
+                        <div class="domain-extension">.bo</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="southern">
+                        <img src="flags/py.png" alt="Paraguay" class="flag-image">
+                        <div class="country-name">Paraguay</div>
+                        <div class="common-chars">Español Guaraní de la</div>
+                        <div class="domain-extension">.py</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="southern">
+                        <img src="flags/uy.png" alt="Uruguay" class="flag-image">
+                        <div class="country-name">Uruguay</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.uy</div>
+                    </div>
+                    <div class="flag-card" data-sa-region="southern">
+                        <img src="flags/cl.png" alt="Chile" class="flag-image">
+                        <div class="country-name">Chile</div>
+                        <div class="common-chars">Español de la en el</div>
+                        <div class="domain-extension">.cl</div>
+                    </div>
+                </div>
+                
+                <div class="summary-text">
+                    <h3>Dél-amerikai országok összefoglalója (12 ország):</h3>
+                    <p><strong>Északi régió (8):</strong> Brazília, Kolumbia, Venezuela, Guyana, Suriname, Peru, Ecuador</p>
+                    <p><strong>Déli régió (5):</strong> Argentína, Bolívia, Paraguay, Uruguay, Chile</p>
+                </div>
+            </div>
+            
+            <div id="oceania" class="flag-section">
+                <div class="section-header">
+                    <h2>Óceániai zászlók</h2>
+                    <div class="region-filter">
+                        <button class="filter-btn active" onclick="filterOceaniaRegion('all')">mind</button>
+                        <button class="filter-btn" onclick="filterOceaniaRegion('australia-nz')">ausztrália-új-zéland</button>
+                        <button class="filter-btn" onclick="filterOceaniaRegion('melanesia')">melanézia</button>
+                        <button class="filter-btn" onclick="filterOceaniaRegion('micronesia')">mikronézia</button>
+                        <button class="filter-btn" onclick="filterOceaniaRegion('polynesia')">polinézia</button>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="flag-card" data-oceania-region="australia-nz">
+                        <img src="flags/au.png" alt="Ausztrália" class="flag-image">
+                        <div class="country-name">Ausztrália</div>
+                        <div class="common-chars">English the and of</div>
+                        <div class="domain-extension">.au</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="australia-nz">
+                        <img src="flags/nz.png" alt="Új-Zéland" class="flag-image">
+                        <div class="country-name">Új-Zéland</div>
+                        <div class="common-chars">English Māori the and</div>
+                        <div class="domain-extension">.nz</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="melanesia">
+                        <img src="flags/pg.png" alt="Pápua Új-Guinea" class="flag-image">
+                        <div class="country-name">Pápua Új-Guinea</div>
+                        <div class="common-chars">English Tok Pisin Hiri</div>
+                        <div class="domain-extension">.pg</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="melanesia">
+                        <img src="flags/fj.png" alt="Fidzsi" class="flag-image">
+                        <div class="country-name">Fidzsi</div>
+                        <div class="common-chars">English Fijian Hindi</div>
+                        <div class="domain-extension">.fj</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="melanesia">
+                        <img src="flags/sb.png" alt="Salamon-szigetek" class="flag-image">
+                        <div class="country-name">Salamon-szigetek</div>
+                        <div class="common-chars">English Pijin the and</div>
+                        <div class="domain-extension">.sb</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="melanesia">
+                        <img src="flags/vu.png" alt="Vanuatu" class="flag-image">
+                        <div class="country-name">Vanuatu</div>
+                        <div class="common-chars">English Français Bislama</div>
+                        <div class="domain-extension">.vu</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="micronesia">
+                        <img src="flags/fm.png" alt="Mikronézia" class="flag-image">
+                        <div class="country-name">Mikronézia</div>
+                        <div class="common-chars">English Chuukese Pohnpeian</div>
+                        <div class="domain-extension">.fm</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="micronesia">
+                        <img src="flags/mh.png" alt="Marshall-szigetek" class="flag-image">
+                        <div class="country-name">Marshall-szigetek</div>
+                        <div class="common-chars">English Marshallese the and</div>
+                        <div class="domain-extension">.mh</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="micronesia">
+                        <img src="flags/pw.png" alt="Palau" class="flag-image">
+                        <div class="country-name">Palau</div>
+                        <div class="common-chars">English Palauan the and</div>
+                        <div class="domain-extension">.pw</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="micronesia">
+                        <img src="flags/nr.png" alt="Nauru" class="flag-image">
+                        <div class="country-name">Nauru</div>
+                        <div class="common-chars">English Nauruan the and</div>
+                        <div class="domain-extension">.nr</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="micronesia">
+                        <img src="flags/ki.png" alt="Kiribati" class="flag-image">
+                        <div class="country-name">Kiribati</div>
+                        <div class="common-chars">English Gilbertese the and</div>
+                        <div class="domain-extension">.ki</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="polynesia">
+                        <img src="flags/ws.png" alt="Szamoa" class="flag-image">
+                        <div class="country-name">Szamoa</div>
+                        <div class="common-chars">English Samoan the and</div>
+                        <div class="domain-extension">.ws</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="polynesia">
+                        <img src="flags/to.png" alt="Tonga" class="flag-image">
+                        <div class="country-name">Tonga</div>
+                        <div class="common-chars">English Tongan the and</div>
+                        <div class="domain-extension">.to</div>
+                    </div>
+                    <div class="flag-card" data-oceania-region="polynesia">
+                        <img src="flags/tv.png" alt="Tuvalu" class="flag-image">
+                        <div class="country-name">Tuvalu</div>
+                        <div class="common-chars">English Tuvaluan the and</div>
+                        <div class="domain-extension">.tv</div>
+                    </div>
+                </div>
+                
+                <div class="summary-text">
+                    <h3>Óceániai országok összefoglalója (14 ország):</h3>
+                    <p><strong>Ausztrália-Új-Zéland (2):</strong> Ausztrália, Új-Zéland</p>
+                    <p><strong>Melanézia (4):</strong> Pápua Új-Guinea, Fidzsi, Salamon-szigetek, Vanuatu</p>
+                    <p><strong>Mikronézia (5):</strong> Mikronézia, Marshall-szigetek, Palau, Nauru, Kiribati</p>
+                    <p><strong>Polinézia (3):</strong> Szamoa, Tonga, Tuvalu</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        function showFlagSection(sectionId) {
+            const sections = document.querySelectorAll('.flag-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            const tabs = document.querySelectorAll('.sub-nav a');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function filterRegion(region) {
+            const cards = document.querySelectorAll('#europe .flag-card');
+            const buttons = document.querySelectorAll('#europe .filter-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide cards based on region
+            cards.forEach(card => {
+                if (region === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.dataset.region === region) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+        
+        function filterNorthAmericaRegion(region) {
+            const cards = document.querySelectorAll('#north-america .flag-card');
+            const buttons = document.querySelectorAll('#north-america .filter-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide cards based on region
+            cards.forEach(card => {
+                if (region === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.dataset.naRegion === region) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+        
+        function filterSouthAmericaRegion(region) {
+            const cards = document.querySelectorAll('#south-america .flag-card');
+            const buttons = document.querySelectorAll('#south-america .filter-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide cards based on region
+            cards.forEach(card => {
+                if (region === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.dataset.saRegion === region) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+        
+        function filterAsiaRegion(region) {
+            const cards = document.querySelectorAll('#asia .flag-card');
+            const buttons = document.querySelectorAll('#asia .filter-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide cards based on region
+            cards.forEach(card => {
+                if (region === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.dataset.asiaRegion === region) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+        
+        function filterOceaniaRegion(region) {
+            const cards = document.querySelectorAll('#oceania .flag-card');
+            const buttons = document.querySelectorAll('#oceania .filter-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide cards based on region
+            cards.forEach(card => {
+                if (region === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.dataset.oceaniaRegion === region) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+        
+        function filterAfricaRegion(region) {
+            const cards = document.querySelectorAll('#africa .flag-card');
+            const buttons = document.querySelectorAll('#africa .filter-btn');
+            
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide cards based on region
+            cards.forEach(card => {
+                if (region === 'all') {
+                    card.classList.remove('hidden');
+                } else {
+                    if (card.dataset.africaRegion === region) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+    </script>
+    </div>
+</body>
+</html>
